@@ -1,0 +1,25 @@
+/* Outlook 2003 – userContent.css (treść wiadomości: czcionka jak w Outlooku) */
+@-moz-document url-prefix("mailbox-message:"), url-prefix("imap-message:"), url-prefix("news-message:"), url-prefix("file:") {
+  body {
+    font-family: Tahoma, Verdana, Arial, sans-serif;
+  }
+}
+
+/* Tylko wygląd edytora. Te reguły nie są częścią wysyłanego HTML. */
+@-moz-document url("about:blank?compose") {
+  html, body {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    caret-color: #000000 !important;
+    color-scheme: light !important;
+  }
+  body {
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+  ::selection {
+    background: #316AC5;
+    color: #fff;
+  }
+}

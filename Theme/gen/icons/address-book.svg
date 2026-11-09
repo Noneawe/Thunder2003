@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Adresy</title>
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fffef7"/><stop offset="1" stop-color="#deded0"/></linearGradient>
+  <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff1b1"/><stop offset="1" stop-color="#d8a444"/></linearGradient>
+  <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#a8d9ff"/><stop offset="1" stop-color="#4278bb"/></linearGradient>
+  <linearGradient id="green" x2="0" y2="1"><stop stop-color="#c4ef98"/><stop offset="1" stop-color="#4f923e"/></linearGradient>
+  <linearGradient id="purple" x2="0" y2="1"><stop stop-color="#d5c3f7"/><stop offset="1" stop-color="#8661b2"/></linearGradient>
+  <linearGradient id="steel" x2="0" y2="1"><stop stop-color="#f3f7fa"/><stop offset="1" stop-color="#8a9ead"/></linearGradient>
+  <linearGradient id="red" x2="0" y2="1"><stop stop-color="#ffb59e"/><stop offset="1" stop-color="#c7352b"/></linearGradient>
+</defs>
+<g stroke-width="1" stroke-linecap="round"><path d="M5.5 2.5h14v19h-14z" fill="url(#blue)" stroke="#355c85"/><path d="M3 6h4M3 11h4M3 16h4" stroke="#c5d5dd" stroke-width="2"/><path d="M20 5h2v4h-2m0 3h2v4h-2" fill="#e4bd6b" stroke="#947a44"/><circle cx="13" cy="9" r="3" fill="#ffe2b1" stroke="#956f4e"/><path d="M8.5 18v-2c0-5 9-5 9 0v2z" fill="url(#green)" stroke="#3c7130"/></g>
+</svg>

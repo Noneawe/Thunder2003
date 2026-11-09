@@ -1,0 +1,535 @@
+/* ==========================================================================
+   Outlook 2003 (Luna Blue) – userChrome.css dla Thunderbirda 115+ / 159
+   Wymaga: about:config -> toolkit.legacyUserProfileCustomizations.stylesheets = true
+   Skopiuj ten plik oraz folder icons/ do: <profil>/chrome/
+   ========================================================================== */
+
+@import url("icons/buttons.css");
+
+:root {
+  /* paleta Luna / Office 2003 */
+  --o3-bar-top:      #2E2B52;
+  --o3-bar-bottom:   #1F1D3A;
+  --o3-bar-border:   #4B4784;
+  --o3-frame:        #12112A;
+  --o3-pane:         #1E1D36;
+  --o3-hdr-top:      #6A5BC2;
+  --o3-hdr-bottom:   #463C96;
+  --o3-sel:          #6D4FE0;
+  --o3-hover-top:    #234E5B;
+  --o3-hover-bottom: #256E79;
+  --o3-hover-border: #4FD1C5;
+  --o3-sep:          #4B4784;
+  --o3-font: Tahoma, "Segoe UI", Verdana, sans-serif;
+  --o3-surface: #17162B;
+  --o3-popup: #23213D;
+  --o3-text: #E9E7F5;
+  --o3-muted: color-mix(in srgb, #E9E7F5 75%, #17162B);
+  --o3-hover: #245C66;
+  --o3-input-border: #5A55A0;
+
+  --toolbar-bgcolor: #25234A !important;
+  --toolbar-color: #E9E7F5 !important;
+  --sidebar-background-color: var(--o3-pane) !important;
+  --selected-item-color: #6D4FE0 !important;            /* Tło zaznaczenia (w TB to jest tło!) */
+  --selected-item-text-color: #fff !important;
+  --selected-item-background-color: #6D4FE0 !important;
+  --tree-view-selected-bg: #6D4FE0 !important;
+  --layout-background-0: #17162B !important;
+  --layout-background-1: var(--o3-pane) !important;
+  --layout-background-2: #25234A !important;
+  --layout-color-1: #E9E7F5 !important;
+  --layout-border-0: var(--o3-bar-border) !important;
+}
+
+/* ---------- czcionka interfejsu (13px) ---------- */
+:root,
+#messengerWindow,
+menupopup, menu, menuitem,
+toolbarbutton:not(.titlebar-button), button:not(.titlebar-button),
+tree, treechildren, listbox {
+  font-family: var(--o3-font) !important;
+  font-size: 13px !important;
+}
+
+/* ---------- pasek menu ---------- */
+#toolbar-menubar,
+#mail-toolbar-menubar2,
+menubar {
+  background: linear-gradient(to bottom, var(--o3-bar-top), #27254A) !important;
+  border-bottom: 1px solid var(--o3-bar-border) !important;
+  padding: 1px 2px !important;
+}
+/* Ukryty pasek ma natywnie wysokość 0; odstępy i ramka odsłaniały fragment liter. */
+#toolbar-menubar[autohide][inactive="true"]:not([customizing="true"]),
+#mail-toolbar-menubar2[autohide][inactive="true"]:not([customizing="true"]),
+toolbar[type="menubar"][autohide][inactive="true"]:not([customizing="true"]) {
+  padding: 0 !important;
+  border: 0 !important;
+}
+menubar > menu {
+  border: 1px solid transparent !important;
+  padding: 2px 6px !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+menubar > menu:hover,
+menubar > menu[_moz-menuactive="true"],
+menubar > menu[open="true"] {
+  background: linear-gradient(to bottom, var(--o3-hover-top), var(--o3-hover-bottom)) !important;
+  border-color: var(--o3-hover-border) !important;
+  color: #E9E7F5 !important;
+}
+menubar > menu[open="true"] {
+  background: linear-gradient(to bottom, #1E1D36, #1F1D3A) !important;
+  border-color: var(--o3-bar-border) !important;
+  border-bottom-color: transparent !important;
+}
+
+/* ---------- paski narzędzi ---------- */
+#unifiedToolbarContainer,
+#unifiedToolbar,
+#mail-bar3,
+toolbar,
+.toolbar,
+#tabs-toolbar,
+#navigation-toolbox {
+  background: linear-gradient(to bottom, var(--o3-bar-top) 0%, var(--o3-bar-bottom) 100%) !important;
+  border-color: var(--o3-bar-border) !important;
+  color: #E9E7F5 !important;
+}
+#unifiedToolbarContainer {
+  border-bottom: 1px solid var(--o3-bar-border) !important;
+}
+
+/* przyciski paska – płaskie, z pomarańczowym hoverem jak w Office 2003 */
+toolbarbutton,
+.toolbarbutton-1,
+.unified-toolbar-button,
+button.unified-toolbar-button {
+  border: 1px solid transparent !important;
+  border-radius: 3px !important;
+  background-color: transparent !important;
+  color: #E9E7F5 !important;
+  box-shadow: none !important;
+}
+toolbarbutton:hover,
+.toolbarbutton-1:hover,
+.unified-toolbar-button:hover {
+  background-color: #245C66 !important;
+  border-color: var(--o3-hover-border) !important;
+}
+toolbarbutton:hover:active,
+toolbarbutton[open="true"],
+toolbarbutton[checked="true"],
+.unified-toolbar-button:active,
+.unified-toolbar-button[aria-pressed="true"] {
+  background-color: #2F8E99 !important;
+  border-color: #7EE8DC !important;
+}
+
+/* separatory */
+toolbarseparator,
+.toolbarbutton-1 + toolbarseparator {
+  border-inline-start: 1px solid var(--o3-sep) !important;
+  border-inline-end: 1px solid #17162B !important;
+}
+
+/* ---------- menu rozwijane ---------- */
+menupopup,
+panel {
+  --panel-background: #23213D !important;
+  --panel-background-color: var(--o3-popup) !important;
+  --panel-text-color: var(--o3-text) !important;
+  --panel-icon-fill: var(--o3-text) !important;
+  --panel-color: #E9E7F5 !important;
+  --panel-border-color: var(--o3-bar-border) !important;
+  --panel-border-radius: 0 !important;
+  --arrowpanel-background: #23213D !important;
+  --arrowpanel-color: #E9E7F5 !important;
+  --arrowpanel-border-color: var(--o3-bar-border) !important;
+  --arrowpanel-border-radius: 0 !important;
+}
+menupopup {
+  /* lewa „rynienka” na ikony jak w Office 2003 */
+  background: linear-gradient(to right, #27254A 0, #2E2B52 24px, #23213D 25px) !important;
+  border: 1px solid var(--o3-bar-border) !important;
+  border-radius: 0 !important;
+  padding: 2px !important;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.35) !important;
+}
+menupopup menuitem,
+menupopup menu {
+  border: 1px solid transparent !important;
+  border-radius: 0 !important;
+  padding: 3px 6px !important;
+  color: #E9E7F5 !important;
+}
+menupopup menuitem[_moz-menuactive="true"],
+menupopup menu[_moz-menuactive="true"],
+menupopup menuitem:hover,
+menupopup menu:hover {
+  background: linear-gradient(to bottom, var(--o3-hover-top), var(--o3-hover-bottom)) !important;
+  border-color: var(--o3-hover-border) !important;
+  color: #E9E7F5 !important;
+}
+menuseparator {
+  border-top: 1px solid var(--o3-sep) !important;
+  margin: 2px 2px 2px 26px !important;
+  padding: 0 !important;
+}
+
+/* ---------- pasek przestrzeni (Mail / Kalendarz / Zadania…) – jak panel nawigacji ---------- */
+#spacesToolbar {
+  background: linear-gradient(to bottom, var(--o3-hdr-top), var(--o3-hdr-bottom)) !important;
+  border-inline-end: 1px solid #2A2468 !important;
+}
+#spacesToolbar .spaces-toolbar-button,
+#spacesToolbar toolbarbutton {
+  color: #fff !important;
+  border-radius: 3px !important;
+}
+#spacesToolbar .spaces-toolbar-button:hover {
+  background-color: #245C66 !important;
+  border-color: var(--o3-hover-border) !important;
+  color: #E9E7F5 !important;
+}
+#spacesToolbar .spaces-toolbar-button.current,
+#spacesToolbar .spaces-toolbar-button[aria-selected="true"] {
+  background-color: #2F8E99 !important;
+  border-color: #7EE8DC !important;
+  color: #E9E7F5 !important;
+}
+
+/* ---------- zakładki ---------- */
+#tabmail-tabs,
+.tabbrowser-tabs {
+  background: linear-gradient(to bottom, var(--o3-bar-top), var(--o3-bar-bottom)) !important;
+}
+.tabmail-tab,
+.tabbrowser-tab {
+  --tab-selected-bgcolor: #17162B;
+}
+.tabmail-tab .tab-background,
+.tabbrowser-tab .tab-background {
+  border-radius: 3px 3px 0 0 !important;
+  border: 1px solid var(--o3-bar-border) !important;
+  background: linear-gradient(to bottom, #2E2B52, #1F1D3A) !important;
+  margin-block: 2px 0 !important;
+}
+.tabmail-tab[selected="true"] .tab-background,
+.tabbrowser-tab[selected="true"] .tab-background {
+  background: #17162B !important;
+  border-bottom-color: #17162B !important;
+}
+
+/* ---------- panel folderów (lewy) ---------- */
+#folderPane,
+#folderPaneBox,
+#folderTree,
+#folderTree ul {
+  background-color: var(--o3-pane) !important;
+  color: #E9E7F5 !important;
+}
+#folderPaneHeaderBar,
+#folderPane .pane-header,
+.folder-pane-header,
+#folderPaneHeader {
+  background: linear-gradient(to bottom, var(--o3-hdr-top), var(--o3-hdr-bottom)) !important;
+  color: #fff !important;
+  font-weight: bold !important;
+  border-bottom: 1px solid #2A2468 !important;
+  text-shadow: none !important;
+}
+#folderPaneHeaderBar *,
+#folderPane .pane-header * {
+  color: #fff !important;
+}
+/* przyciski (np. New Message) mają jasne tło -> ciemny tekst i ramka jak w Office */
+#folderPaneHeaderBar button,
+#folderPaneHeaderBar button *,
+#folderPaneHeaderBar .button,
+#folderPaneHeaderBar .button *,
+#folderPaneHeaderBar #folderPaneWriteMessage,
+#folderPaneHeaderBar #folderPaneWriteMessage * {
+  color: #E9E7F5 !important;
+}
+#folderPaneHeaderBar button,
+#folderPaneHeaderBar .button {
+  background-color: #2E2B52 !important;
+  border: 1px solid #7A74C8 !important;
+  border-radius: 3px !important;
+}
+#folderPaneHeaderBar button:hover,
+#folderPaneHeaderBar .button:hover {
+  background-color: #245C66 !important;
+  border-color: var(--o3-hover-border) !important;
+}
+#folderTree li > .container,
+#folderTree li > div {
+  border-radius: 0 !important;
+}
+#folderTree li > .container:hover,
+#folderTree li > div:hover {
+  background-color: #245C66 !important;
+}
+#folderTree li.selected > .container,
+#folderTree li.selected > div,
+#folderTree .selected > .container {
+  background: var(--o3-sel) !important;
+  color: #fff !important;
+  outline: 1px dotted #fff !important;
+  outline-offset: -2px !important;
+}
+#folderTree li.selected > .container *,
+#folderTree .selected > .container * {
+  color: #fff !important;
+}
+
+/* ---------- lista wiadomości ---------- */
+#threadPane,
+#threadTree {
+  background: #17162B !important;
+  color: #E9E7F5 !important;
+}
+/* nagłówek kolumn */
+#threadTree thead,
+#threadTree .tree-table-header,
+#threadTree th,
+#threadPane .table-header-cell {
+  background-color: #2A2850 !important;
+  color: #E9E7F5 !important;
+  border-color: #4B4784 !important;
+  border-radius: 0 !important;
+  font-weight: normal !important;
+}
+#threadTree th:hover,
+#threadPane .table-header-cell:hover {
+  background-color: #245C66 !important;
+}
+/* wiersze */
+#threadTree tr[is="thread-row"],
+#threadTree tr {
+  border-radius: 0 !important;
+  border-bottom: 1px solid #25234A !important;
+}
+#threadTree tr:hover {
+  background: #28264A !important;
+}
+#threadTree tr.selected,
+#threadTree tr.selected:focus-within,
+#threadTree:focus-within tr.selected,
+#threadTree tr[aria-selected="true"],
+#threadTree tr.selected td,
+#threadTree tr.selected .card-container,
+#threadTree tr[aria-selected="true"] td {
+  background-color: #6D4FE0 !important;
+  color: #fff !important;
+}
+#threadTree tr.selected *,
+#threadTree tr[aria-selected="true"] * {
+  color: #fff !important;
+}
+/* zaznaczony, ale lista bez fokusu – jaśniejszy niebieski jak w Outlooku */
+#threadTree:not(:focus-within) tr.selected,
+#threadTree:not(:focus-within) tr.selected td,
+#threadTree:not(:focus-within) tr.selected .card-container {
+  background-color: #433B86 !important;
+}
+/* nieprzeczytane – pogrubione jak w Outlooku */
+#threadTree tr.unread {
+  font-weight: bold !important;
+}
+
+/* ---------- panel podglądu / nagłówek wiadomości ---------- */
+#messagepaneboxwrapper,
+#messagePane,
+#messageHeader,
+.message-header-container,
+#messageHeader .header-container {
+  background: linear-gradient(to bottom, #26244A, #1E1D36) !important;
+  color: #E9E7F5 !important;
+  border-bottom: 1px solid var(--o3-bar-border) !important;
+}
+.message-header-subject,
+#expandedsubjectBox {
+  font-weight: bold !important;
+  font-size: 15px !important;
+}
+
+/* ---------- dzielniki ---------- */
+splitter,
+#folderPaneSplitter,
+#threadPaneSplitter,
+#messagePaneSplitter {
+  background: var(--o3-frame) !important;
+  border-color: var(--o3-bar-border) !important;
+}
+
+/* ---------- pole wyszukiwania / formularze ---------- */
+input, textarea, search-textbox, .searchBox,
+html|input, html|textarea {
+  background: #17162B !important;
+  border: 1px solid #5A55A0 !important;
+  border-radius: 0 !important;
+  color: #E9E7F5 !important;
+}
+input:focus, textarea:focus, html|input:focus {
+  border-color: var(--o3-sel) !important;
+  outline: none !important;
+}
+
+/* ---------- przyciski w dialogach (tylko dialogi, bez przycisków z ikonami) ---------- */
+dialog button:not([class*="icon"]):not(.button-flat),
+dialog html|button:not([class*="icon"]):not(.button-flat) {
+  background-color: #2E2B52 !important;
+  border: 1px solid #7A74C8 !important;
+  border-radius: 3px !important;
+  color: #E9E7F5 !important;
+  padding: 2px 10px !important;
+}
+dialog button:hover:not([class*="icon"]):not(.button-flat) {
+  box-shadow: inset 0 0 0 2px #4FD1C5 !important;
+}
+
+/* ---------- pasek stanu ---------- */
+#status-bar,
+statusbar,
+#statusbar-display {
+  background: linear-gradient(to bottom, var(--o3-bar-top), var(--o3-bar-bottom)) !important;
+  border-top: 1px solid var(--o3-bar-border) !important;
+  color: #E9E7F5 !important;
+}
+
+/* ---------- paski przewijania w stylu XP ---------- */
+* {
+  scrollbar-color: #4B4784 #1E1D36;
+}
+
+/* ---------- przyciski okna (minimalizuj / maksymalizuj / zamknij) ----------
+   Używają czcionki ikon systemu – nie wolno im nadpisywać fontu ani ramek. */
+.titlebar-buttonbox,
+.titlebar-buttonbox-container,
+.titlebar-button,
+.titlebar-button * {
+  font-family: "Segoe Fluent Icons", "Segoe MDL2 Assets", sans-serif !important;
+}
+.titlebar-button {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  color: #E9E7F5 !important;
+  box-shadow: none !important;
+}
+.titlebar-button:hover {
+  background-color: rgba(255, 255, 255, 0.45) !important;
+}
+.titlebar-close:hover {
+  background-color: #E81123 !important;
+  color: #fff !important;
+}
+
+/* ---------- nagłówek: temat pierwszy, akcje główne z etykietami ---------- */
+#messageHeader {
+  padding: 4px 8px !important;
+  row-gap: 3px !important;
+  background: linear-gradient(var(--o3-bar-top), var(--o3-pane)) !important;
+}
+#headerSubjectSecurityContainer {
+  order: -1;
+  min-inline-size: 0;
+  margin-block-end: 0;
+}
+#expandedsubjectBox {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+}
+#headerSenderToolbarContainer {
+  gap: 8px;
+}
+#header-view-toolbar {
+  gap: 4px !important;
+}
+#hdrReplyAllButton .toolbarbutton-text,
+#hdrReplyListButton .toolbarbutton-text,
+#hdrFollowupButton .toolbarbutton-text,
+#hdrArchiveButton .toolbarbutton-text,
+#hdrJunkButton .toolbarbutton-text {
+  display: none !important;
+}
+#hdrArchiveButton,
+#hdrJunkButton {
+  min-inline-size: 28px !important;
+  padding-inline: 5px !important;
+}
+#expandedfromBox,
+#expandedtoBox,
+#expandedccBox,
+#messageHeader .message-header-datetime,
+#messageHeader .message-header-label {
+  color: var(--o3-muted) !important;
+}
+
+/* ---------- spójne powierzchnie paneli, menu i formularzy ---------- */
+#appMenu-popup {
+  --appmenu-icons-stroke: var(--o3-text) !important;
+  --appmenu-icons-fill: color-mix(in srgb, var(--o3-text) 20%, transparent) !important;
+}
+#appMenu-popup panelview,
+#appMenu-popup .panel-subview-body,
+#appMenu-popup .panel-subview-footer {
+  background-color: var(--o3-popup) !important;
+  color: var(--o3-text) !important;
+}
+#appMenu-popup .subviewbutton:not([disabled]):hover {
+  background-color: var(--o3-hover) !important;
+  color: var(--o3-text) !important;
+}
+#composeContentBox,
+#messageEditor {
+  background-color: var(--o3-surface) !important;
+  color: var(--o3-text) !important;
+  box-shadow: none !important;
+}
+#MsgHeadersToolbar {
+  background: var(--o3-pane) !important;
+  color: var(--o3-text) !important;
+}
+#msgSubject,
+#msgIdentity,
+#msgIdentity::part(text-input),
+.address-container input {
+  background-color: var(--o3-surface) !important;
+  color: var(--o3-text) !important;
+  border-color: var(--o3-input-border) !important;
+}
+#attachmentView,
+#attachmentList {
+  background-color: var(--o3-pane) !important;
+  color: var(--o3-text) !important;
+}
+
+/* ---------- osobne grafiki przycisków w stylu Office 2003 ---------- */
+:is(#header-view-toolbar, #composeToolbar2, #unifiedToolbar)
+:is(toolbarbutton, .unified-toolbar-button) {
+  border-radius: 2px !important;
+  background-image: linear-gradient(to bottom, color-mix(in srgb, var(--o3-surface) 25%, transparent), transparent) !important;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2) !important;
+}
+:is(#header-view-toolbar, #composeToolbar2, #unifiedToolbar)
+:is(toolbarbutton, .unified-toolbar-button):not([disabled]):hover {
+  background-image: linear-gradient(var(--o3-hover-top), var(--o3-hover-bottom)) !important;
+  border-color: var(--o3-hover-border) !important;
+}
+:is(#header-view-toolbar, #composeToolbar2, #unifiedToolbar)
+:is(toolbarbutton, .unified-toolbar-button):not([disabled]):is(:active, [open="true"], [checked="true"]) {
+  background-image: linear-gradient(#2F8E99, var(--o3-hover-bottom)) !important;
+  border-color: #7EE8DC !important;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+:is(#header-view-toolbar, #composeToolbar2, #unifiedToolbar)
+:is(toolbarbutton, .unified-toolbar-button)[disabled]
+:is(.toolbarbutton-icon, .button-icon) {
+  filter: grayscale(1);
+}

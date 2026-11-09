@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Drukuj</title>
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fffef7"/><stop offset="1" stop-color="#deded0"/></linearGradient>
+  <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff1b1"/><stop offset="1" stop-color="#d8a444"/></linearGradient>
+  <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#a8d9ff"/><stop offset="1" stop-color="#4278bb"/></linearGradient>
+  <linearGradient id="green" x2="0" y2="1"><stop stop-color="#c4ef98"/><stop offset="1" stop-color="#4f923e"/></linearGradient>
+  <linearGradient id="purple" x2="0" y2="1"><stop stop-color="#d5c3f7"/><stop offset="1" stop-color="#8661b2"/></linearGradient>
+  <linearGradient id="steel" x2="0" y2="1"><stop stop-color="#f3f7fa"/><stop offset="1" stop-color="#8a9ead"/></linearGradient>
+  <linearGradient id="red" x2="0" y2="1"><stop stop-color="#ffb59e"/><stop offset="1" stop-color="#c7352b"/></linearGradient>
+</defs>
+<g stroke-width="1" stroke-linecap="round"><path d="M6.5 2.5h12v9h-12z" fill="url(#paper)" stroke="#718296"/><rect x="2.5" y="8.5" width="20" height="11" rx="2" fill="url(#steel)" stroke="#596c7d"/><path d="M6.5 14.5h12v8h-12z" fill="url(#paper)" stroke="#718296"/><path d="M9 17h7m-7 3h7" stroke="#a7b3bc"/><path d="M5 11h3" stroke="#75a44f" stroke-width="2"/></g>
+</svg>

@@ -1,0 +1,109 @@
+/* Własne grafiki wektorowe inspirowane Office 2003.
+   URL przy właściwości obrazu: natywne arkusze TB inaczej rozwiązują względne URL w zmiennych. */
+
+#folderPaneWriteMessage {
+  background-image: url("new-message.svg") !important;
+}
+
+#unifiedToolbar .write-message .button-icon {
+  content: url("new-message.svg") !important;
+}
+
+#folderPaneGetMessages {
+  background-image: url("get-mail.svg") !important;
+}
+
+#unifiedToolbar .get-messages .button-icon {
+  content: url("get-mail.svg") !important;
+}
+
+#header-view-toolbar #hdrReplyToSenderButton,
+#header-view-toolbar #hdrReplyButton {
+  list-style-image: url("reply.svg") !important;
+}
+
+#unifiedToolbar .reply .button-icon {
+  content: url("reply.svg") !important;
+}
+
+#header-view-toolbar #hdrReplyAllButton {
+  list-style-image: url("reply-all.svg") !important;
+}
+
+#unifiedToolbar .reply-all .button-icon {
+  content: url("reply-all.svg") !important;
+}
+
+#header-view-toolbar #hdrReplyListButton,
+#header-view-toolbar #hdrFollowupButton {
+  list-style-image: url("reply-list.svg") !important;
+}
+
+#unifiedToolbar .reply-to-list .button-icon {
+  content: url("reply-list.svg") !important;
+}
+
+#header-view-toolbar #hdrForwardButton {
+  list-style-image: url("forward.svg") !important;
+}
+
+#unifiedToolbar .forward-inline .button-icon,
+#unifiedToolbar .forward-attachment .button-icon {
+  content: url("forward.svg") !important;
+}
+
+#header-view-toolbar #hdrTrashButton:not([data-imap-deleted="true"]) {
+  list-style-image: url("delete.svg") !important;
+}
+
+#unifiedToolbar .delete .button-icon {
+  content: url("delete.svg") !important;
+}
+
+#header-view-toolbar #hdrArchiveButton {
+  list-style-image: url("archive.svg") !important;
+}
+
+#unifiedToolbar .archive .button-icon {
+  content: url("archive.svg") !important;
+}
+
+#header-view-toolbar #hdrJunkButton {
+  list-style-image: url("junk.svg") !important;
+}
+
+#unifiedToolbar .junk .button-icon {
+  content: url("junk.svg") !important;
+}
+
+#composeToolbar2 #button-attach {
+  list-style-image: url("attach.svg") !important;
+}
+
+#composeToolbar2 #button-send {
+  list-style-image: url("send.svg") !important;
+}
+
+#composeToolbar2 #button-save {
+  list-style-image: url("save.svg") !important;
+}
+
+#composeToolbar2 #button-contacts {
+  list-style-image: url("address-book.svg") !important;
+}
+
+#unifiedToolbar .address-book .button-icon {
+  content: url("address-book.svg") !important;
+}
+
+#composeToolbar2 #spellingButton {
+  list-style-image: url("spelling.svg") !important;
+}
+
+#composeToolbar2 #button-print {
+  list-style-image: url("print.svg") !important;
+}
+
+#unifiedToolbar .print .button-icon {
+  content: url("print.svg") !important;
+}

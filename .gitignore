@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+/runtime/
+/artifacts/
+/dist/
+/TestProfiles-en-US/
+/TestProfiles-next/
+/TestProfiles-en-US-next/
+/TestProfiles/*
+!/TestProfiles/open.sh
+!/TestProfiles/README.md
+.DS_Store
+Thumbs.db

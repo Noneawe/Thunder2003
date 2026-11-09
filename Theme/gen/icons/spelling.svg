@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Pisownia</title>
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fffef7"/><stop offset="1" stop-color="#deded0"/></linearGradient>
+  <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff1b1"/><stop offset="1" stop-color="#d8a444"/></linearGradient>
+  <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#a8d9ff"/><stop offset="1" stop-color="#4278bb"/></linearGradient>
+  <linearGradient id="green" x2="0" y2="1"><stop stop-color="#c4ef98"/><stop offset="1" stop-color="#4f923e"/></linearGradient>
+  <linearGradient id="purple" x2="0" y2="1"><stop stop-color="#d5c3f7"/><stop offset="1" stop-color="#8661b2"/></linearGradient>
+  <linearGradient id="steel" x2="0" y2="1"><stop stop-color="#f3f7fa"/><stop offset="1" stop-color="#8a9ead"/></linearGradient>
+  <linearGradient id="red" x2="0" y2="1"><stop stop-color="#ffb59e"/><stop offset="1" stop-color="#c7352b"/></linearGradient>
+</defs>
+<g stroke-width="1" stroke-linecap="round"><path d="M4 12 7 3h1l3 9M5 9h5" fill="none" stroke="#355c85" stroke-width="1.8" stroke-linejoin="round"/><path d="M14 3h3c5 0 5 4 0 4h-3m0-4v9h3c5 0 5-5 0-5" fill="none" stroke="#355c85" stroke-width="1.8"/><path d="m4 17 5 5L21 12l-2-2L9 18l-3-3z" fill="url(#green)" stroke="#3c7130" stroke-linejoin="round"/></g>
+</svg>

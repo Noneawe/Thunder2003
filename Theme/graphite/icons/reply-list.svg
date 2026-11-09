@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<title>Odpowiedz na listę</title>
+<defs>
+  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#fffef7"/><stop offset="1" stop-color="#deded0"/></linearGradient>
+  <linearGradient id="gold" x2="0" y2="1"><stop stop-color="#fff1b1"/><stop offset="1" stop-color="#d8a444"/></linearGradient>
+  <linearGradient id="blue" x2="0" y2="1"><stop stop-color="#a8d9ff"/><stop offset="1" stop-color="#4278bb"/></linearGradient>
+  <linearGradient id="green" x2="0" y2="1"><stop stop-color="#c4ef98"/><stop offset="1" stop-color="#4f923e"/></linearGradient>
+  <linearGradient id="purple" x2="0" y2="1"><stop stop-color="#d5c3f7"/><stop offset="1" stop-color="#8661b2"/></linearGradient>
+  <linearGradient id="steel" x2="0" y2="1"><stop stop-color="#f3f7fa"/><stop offset="1" stop-color="#8a9ead"/></linearGradient>
+  <linearGradient id="red" x2="0" y2="1"><stop stop-color="#ffb59e"/><stop offset="1" stop-color="#c7352b"/></linearGradient>
+</defs>
+<g stroke-width="1" stroke-linecap="round"><path d="M6.5 2.5h10l4 4v14h-14z" fill="url(#paper)" stroke="#718296"/>
+<path d="M16.5 2.5v4h4M9 9h8M9 12h8M9 15h6" fill="none" stroke="#a7b3bc"/><path d="M16 9h3m-3 3h3m-3 3h3" stroke="#5275a7"/><path d="M11 2 2 8l9 6v-4h9V6h-9z" fill="url(#purple)" stroke="#604383" stroke-linejoin="round"/>
+<path d="M10 4 5 8" fill="none" stroke="#f1e7ff"/></g>
+</svg>
